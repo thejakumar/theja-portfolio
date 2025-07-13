@@ -214,19 +214,25 @@
             text-align: center;
         }
 
-        .profile-pic {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            color: white;
-            margin: 0 auto;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Important: this hides the overflowing parts of the image */
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image cover the circle area without distortion */
+}
+
 
         .about-text {
             font-size: 1.1rem;
@@ -583,7 +589,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Theja Moolinti</h1>
-                <h2>Full Stack .NET Developer</h2>
+                <h2>Full Stack Developer</h2>
                 <p>5+ years of experience in designing and developing scalable, high-performance applications including mission-critical healthcare and enterprise solutions.</p>
                 
                 <div class="social-links">
@@ -613,7 +619,8 @@
             <div class="about-content">
                 <div class="about-image fade-in">
                     <div class="profile-pic">
-                        <i class="fas fa-user"></i>
+                        <!-- <i class="fas fa-user"></i> -->
+                         <img src="assets/img/Theja_pic.jpg" alt="">
                     </div>
                 </div>
                 <div class="about-text fade-in">
@@ -729,11 +736,11 @@
                         <h3>Full Stack Developer</h3>
                         <h4>Devcare Solutions | Jan 2024 - Present</h4>
                         <ul>
-                            <li>Led end-to-end development of large-scale Provider Certification system with 35% efficiency improvement</li>
-                            <li>Integrated OAuth2.0 and SAML SSO authentication ensuring HIPAA compliance</li>
-                            <li>Modernized legacy VB.NET applications to .NET Core, improving performance by 30%</li>
-                            <li>Implemented CI/CD pipelines reducing deployment times by 40%</li>
-                            <li>Designed ECM web applications processing 1M+ daily data migrations</li>
+                            <li>Improved certification processing by 60% by modernizing a legacy VB.NET system into a scalable .NET Core microservices-based Provider Certification platform handling high-volume workflows</li>
+                            <li>Secured new projects by leading successful PoCs in document automation, SSO, and legacy migration, directly contributing to contract wins.</li>
+                            <li>Reduced authentication errors by 80% by implementing centralized SSO across 10+ applications using SAML, JWT, and Azure AD (Microsoft Entra ID) for 5,000+ users.</li>
+                            <li>Cut document processing time from 30 days to less than 24 hours by automating metadata extraction using Azure OCR and building a full DMS with archival, merging, and tagging</li>
+                            <li>Automated payment processing and ticket routing via CBOSS and RabbitMQ, integrating credit card, PayPal, and eCheck workflows.</li>
                         </ul>
                     </div>
                 </div>
@@ -743,11 +750,11 @@
                         <h3>Software Engineer</h3>
                         <h4>Tata Consultancy Services / ProVation Medical | Aug 2020 - Sep 2022</h4>
                         <ul>
-                            <li>Architected ProVation Apex healthcare platform serving 10,000+ concurrent users</li>
-                            <li>Developed ML-based medication recommendations increasing revenue by $1M annually</li>
-                            <li>Implemented automated data recording reducing patient wait time by 15 minutes</li>
-                            <li>Deployed applications to Azure with Service Bus and Application Insights monitoring</li>
-                            <li>Ensured compliance with regulatory standards (ADA, HIPAA, IEC 62304)</li>
+                            <li>Scaled a microservices-based SaaS healthcare platform for 10K+ users across specialties (GI, Pulmonology, Surgery), processing 1M+ daily transactions for patient charting and procedure documentation.</li>
+                            <li>Reduced manual migration effort by 80% by automating legacy PVMD to Apex data transfer, ensuring zero data loss during platform transition.</li>
+                            <li>Increased retention by 15% and revenue by $1M+ annually by developing an ML-powered medication recommendation engine integrated into clinical workflows.</li>
+                            <li>Enabled USA–Canada rollout by implementing multi-tenant architecture and localization support for compliance with region-specific regulations.</li>
+                            <li>Ensured 99.9% uptime for mission-critical healthcare workflows by deploying to Azure App Services, integrating Service Bus, and monitoring via Application Insights.</li>
                         </ul>
                     </div>
                 </div>
@@ -757,10 +764,10 @@
                         <h3>Software Engineer</h3>
                         <h4>Young Minds Technology Solutions | May 2019 - Apr 2020</h4>
                         <ul>
-                            <li>Built core modules for iLien SaaS application used by Fortune 500 banks</li>
-                            <li>Automated lien workflows reducing filing errors by 80%</li>
-                            <li>Developed React.js components reducing UI load times by 30%</li>
-                            <li>Engineered data processing pipelines for 2M+ financial records</li>
+                            <li>Developed core modules for iLien, a UCC lien management SaaS used by Wolters Kluwer Lien Solutions clients including JPMorgan Chase and Bank of America, streamlining UCC search, filing, and tracking processes.</li>
+                            <li>Automated lien continuation and expiration workflows, cutting filing errors by 80% and strengthening regulatory compliance for Fortune 500 clients.</li>
+                            <li>Engineered high-performance portfolio and search engine using .NET Core, Oracle PL/SQL, and Angular micro frontends, optimizing multi-million record operations.</li>
+                            <li>Boosted customer retention by 15% by delivering real-time insights through analytics dashboards built with Power BI and Chart.js.</li>
                             <li>Achieved 20-30% reduction in API response times during peak traffic</li>
                         </ul>
                     </div>
